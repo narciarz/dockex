@@ -6,6 +6,7 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 
 # cd /opt/app
 WORKDIR /opt/app
+RUN ./mvnw install -DskipTests
 EXPOSE 8080
 # cp target/spring-boot-web.jar /opt/app/app.jar
 COPY target/*.jar app.jar
